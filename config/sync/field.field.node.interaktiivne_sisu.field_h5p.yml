@@ -1,0 +1,21 @@
+uuid: 0aa7c05b-bf7c-4e9f-a106-f819ba7955ce
+langcode: et
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_h5p
+    - node.type.interaktiivne_sisu
+  module:
+    - h5p
+id: node.interaktiivne_sisu.field_h5p
+field_name: field_h5p
+entity_type: node
+bundle: interaktiivne_sisu
+label: H5P
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: h5p

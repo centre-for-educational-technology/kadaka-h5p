@@ -1,0 +1,10 @@
+uuid: eb2051dd-8f9c-4df9-af8f-23e90e8fcf81
+langcode: et
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Q2Ra3jfoIVk0f3SjxJX61byRQFVBAbpzYDQOiY-kno8
+id: main
+label: Põhinavigatsioon
+description: 'Saidi sekstsiooni lingid'
+locked: true

@@ -1,0 +1,14 @@
+uuid: fae3ca39-d061-4e6a-8078-f9c6573ad40a
+langcode: et
+status: true
+dependencies:
+  module:
+    - user
+_core:
+  default_config_hash: k3aUaZXGDuhkek2TZIee0PApOPTvYZLadziekdyHA5A
+id: user_search
+label: Kasutajad
+path: user
+weight: 0
+plugin: user_search
+configuration: {  }

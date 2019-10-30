@@ -1,0 +1,21 @@
+uuid: 88725fd8-e35d-419e-aacc-069f3385c7e7
+langcode: et
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.interaktiivne_sisu
+  module:
+    - user
+id: node.interaktiivne_sisu.teaser
+targetEntityType: node
+bundle: interaktiivne_sisu
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

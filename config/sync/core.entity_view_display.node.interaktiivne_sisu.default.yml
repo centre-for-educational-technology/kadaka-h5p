@@ -1,0 +1,29 @@
+uuid: 5f92b2cd-b251-47a5-9db7-38a18e6f2372
+langcode: et
+status: true
+dependencies:
+  config:
+    - field.field.node.interaktiivne_sisu.field_h5p
+    - node.type.interaktiivne_sisu
+  module:
+    - h5p
+    - user
+id: node.interaktiivne_sisu.default
+targetEntityType: node
+bundle: interaktiivne_sisu
+mode: default
+content:
+  field_h5p:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: h5p_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

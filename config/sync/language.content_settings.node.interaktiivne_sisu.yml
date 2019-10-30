@@ -1,0 +1,11 @@
+uuid: 1165562d-0cb7-4fbc-948d-5d9b09ede8d5
+langcode: et
+status: true
+dependencies:
+  config:
+    - node.type.interaktiivne_sisu
+id: node.interaktiivne_sisu
+target_entity_type_id: node
+target_bundle: interaktiivne_sisu
+default_langcode: site_default
+language_alterable: false

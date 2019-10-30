@@ -1,0 +1,10 @@
+uuid: a66144c4-41c5-4cb2-9763-87a6ed5a6940
+langcode: et
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Z7KuCUwM_WdTNvLcoltuX3_8d-s-8FZkTN6KgNwF0eM
+id: html_month
+label: 'HTML Kuu'
+locked: true
+pattern: Y-m

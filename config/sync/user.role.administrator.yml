@@ -1,0 +1,11 @@
+uuid: 33b7ef83-f96d-4001-9a23-3a0be528587d
+langcode: et
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Om6FEO7vZZMkPIbVvfxtdkWerQ2PvQM4sWUd6Q3ZnfI
+id: administrator
+label: Haldur
+weight: 2
+is_admin: true
+permissions: {  }

@@ -1,0 +1,10 @@
+uuid: 2fa00d98-b710-4aa0-8ce5-d14aa8629822
+langcode: et
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: bqZsN31T2n0UjcbyCpOPi9D2iO0sAOHR7FnEs9qMvaA
+id: comment
+label: 'Vaikimisi kommentaarid'
+target_entity_type_id: node
+description: 'Võimaldab sisu kommenteerida'

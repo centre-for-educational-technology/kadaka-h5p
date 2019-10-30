@@ -1,0 +1,18 @@
+uuid: f0abd918-4b48-42a9-81af-ca63ad821ae6
+langcode: et
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: H5P
+type: interaktiivne_sisu
+description: 'Interaktiivne sisuobjekt.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

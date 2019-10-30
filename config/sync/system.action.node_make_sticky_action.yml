@@ -1,0 +1,13 @@
+uuid: 7fcd175e-6738-494d-9467-9d446f7e296a
+langcode: et
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: sOb26JSy3fGpWkvR0WYN6_hMqj_6d1rvbvrkzp1yya0
+id: node_make_sticky_action
+label: 'Sisu muutmine kleepuvaks'
+type: node
+plugin: node_make_sticky_action
+configuration: {  }

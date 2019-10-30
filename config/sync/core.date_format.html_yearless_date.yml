@@ -1,0 +1,10 @@
+uuid: 43602656-8e8c-4370-be60-ca0b89154010
+langcode: et
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 5VpawMrKPEPCkoO4YpPa0TDFO2dgiIHfTziJtwlmUxc
+id: html_yearless_date
+label: 'HTML Ilma aastata kuupäev'
+locked: true
+pattern: m-d
