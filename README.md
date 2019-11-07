@@ -3,12 +3,16 @@
 ## First-time setup
 ```
 composer install
+```
+- Setup drupal site
+```
 vendor/bin/drush en h5p
 vendor/bin/drush en h5peditor
 vendor/bin/drush then bootstrap
 vendor/bin/drush config-set system.theme default bootstrap
 vendor/bin/drush cr
 ```
+- Make site settings up to date
 
 ## Development
 
