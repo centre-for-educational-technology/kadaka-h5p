@@ -4,17 +4,11 @@
 - ```
   composer install
   ```
-- Setup drupal site (Note: choose Estonian as language)
+- Setup drupal site (Note: choose English as language)
 - ```
-  vendor/bin/drush en h5p
-  vendor/bin/drush en h5peditor
-  vendor/bin/drush then bootstrap
-  vendor/bin/drush config-set system.theme default bootstrap
-  vendor/bin/drush cr
-  ```
-- Add Russian language from settings
-- ```
-  vendor/bin/drush cim
+  vendor/bin/drush ev '\Drupal::entityManager()->getStorage("shortcut_set")->load("default")->delete();'
+  vendor/bin/drush cset system.site uuid <uuid> -y
+  vendor/bin/drush cim -y
   ```
 
 ## Development
