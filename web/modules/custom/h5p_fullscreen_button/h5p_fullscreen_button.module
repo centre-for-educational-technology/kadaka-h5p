@@ -1,0 +1,10 @@
+<?php
+
+function h5p_fullscreen_button_h5p_scripts_alter(&$scripts, $libraries, $mode) {
+  if ($mode == 'iframe') {
+    $scripts []= (object) [
+      'path' => drupal_get_path('module', 'h5p_fullscreen_button') . '/vendor/plugin.js',
+      'version' => '?v=1.0.17'
+    ];
+  }
+}
