@@ -1,10 +1,36 @@
 <?php
 
+/**
+ * Implements hook_h5p_scripts_alter().
+ */
 function h5p_fullscreen_button_h5p_scripts_alter(&$scripts, $libraries, $mode) {
   if ($mode == 'iframe') {
     $scripts []= (object) [
-      'path' => drupal_get_path('module', 'h5p_fullscreen_button') . '/vendor/plugin.js',
-      'version' => '?v=1.0.17'
+      'path' => drupal_get_path('module', 'h5p_fullscreen_button') . '/js/plugin.js',
+      'version' => '?v=1.0.29'
     ];
   }
+}
+
+/**
+ * Implements hook_h5p_styles_alter().
+ */
+function h5p_fullscreen_button_h5p_styles_alter(array &$styles, array $libraries, string $mode) {
+  // TODO Make sure that styles are only loaded in correct context
+  $styles[] = (object) [
+    'path' => drupal_get_path('module', 'h5p_fullscreen_button') . '/css/fullscreenbutton.css',
+    'version' => '?v=1.0.0',
+  ];
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function h5p_fullscreen_button_page_attachments(array &$page) {
+  $service = \Drupal::service('h5p.fullscreenbutton.default');
+
+  $page['#attached']['drupalSettings']['h5p_fullscreen_button'] = [
+    'l10n' => $service->getLocalization(),
+    'language' => \Drupal::languageManager()->getCurrentLanguage()->getId(),
+  ];
 }

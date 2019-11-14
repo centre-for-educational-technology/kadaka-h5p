@@ -1,0 +1,4 @@
+services:
+  h5p.fullscreenbutton.default:
+    class: Drupal\h5p_fullscreen_button\H5PFullscreenButtonService
+    arguments: []
