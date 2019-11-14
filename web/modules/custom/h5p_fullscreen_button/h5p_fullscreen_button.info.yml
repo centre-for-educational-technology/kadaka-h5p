@@ -1,0 +1,7 @@
+name: H5P View Embed Button Module
+description: Implements a button that redirects to the embed view page of the content type.
+package: Custom
+type: module
+core: 8.x
+dependencies:
+  - h5p:h5p
