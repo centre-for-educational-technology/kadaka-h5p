@@ -1,4 +1,4 @@
-uuid: afb780d6-2a76-40d3-a2cd-fc46093a03af
+uuid: 998a02e2-7813-4518-a6b4-d8b144a71414
 langcode: et
 status: true
 dependencies:
@@ -8,8 +8,8 @@ dependencies:
     - bootstrap
 id: keelevahetaja
 theme: bootstrap
-region: sidebar_second
-weight: -7
+region: navigation
+weight: -6
 provider: null
 plugin: 'language_block:language_interface'
 settings:
