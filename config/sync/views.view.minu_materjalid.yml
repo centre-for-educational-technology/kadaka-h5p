@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.interaktiivne_sisu
+    - system.menu.tools
   module:
     - node
     - user
@@ -335,7 +336,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: 'Minu Materjalid'
+      title: 'Minu materjalid'
       header: {  }
       footer: {  }
       empty: {  }
@@ -397,6 +398,15 @@ display:
     display_options:
       display_extenders: {  }
       path: my-content
+      menu:
+        type: normal
+        title: 'Minu materjalid'
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: tools
     cache_metadata:
       max-age: -1
       contexts:
