@@ -1,0 +1,30 @@
+label: 'Все материалы'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Применить
+          reset_button_label: Отмена
+          exposed_sorts_label: 'Сортировать по'
+          sort_asc_label: Повышение
+          sort_desc_label: Убывающий
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Предметы на странице'
+            offset_label: Сдвиг
+      fields:
+        title:
+          label: Название
+        uid:
+          label: Автор
+        created:
+          label: 'Время создания'
+        langcode:
+          label: Язык
+      title: 'Все материалы'
+  page_1:
+    display_options:
+      menu:
+        title: 'Все материалы'
