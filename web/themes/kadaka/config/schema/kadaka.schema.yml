@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the THEMETITLE theme.
+
+kadaka.settings:
+  type: theme_settings
+  label: 'kadaka settings'
