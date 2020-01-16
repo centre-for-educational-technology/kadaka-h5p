@@ -1,0 +1,28 @@
+uuid: 1cdb6424-e07c-44e8-bd0f-8602a247a86d
+langcode: et
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - kadaka
+id: kadaka_keelevahetaja
+theme: kadaka
+region: navigation
+weight: -6
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Keele vahetaja'
+  provider: language
+  label_display: '0'
+visibility:
+  language:
+    id: language
+    langcodes:
+      et: et
+      ru: ru
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'

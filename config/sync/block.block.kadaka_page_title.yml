@@ -1,0 +1,20 @@
+uuid: 87cb9bd2-b760-4f7e-8dc8-1c6ded3acf8c
+langcode: et
+status: true
+dependencies:
+  theme:
+    - kadaka
+_core:
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+id: kadaka_page_title
+theme: kadaka
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

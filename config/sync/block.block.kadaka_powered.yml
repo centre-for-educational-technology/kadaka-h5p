@@ -1,0 +1,22 @@
+uuid: d6c968d7-22a3-4195-87eb-26d07071d0bc
+langcode: et
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kadaka
+_core:
+  default_config_hash: iggZSiUKz4mYP1YPJ8SsUfFu79HIgOTt6IDy3Up59aM
+id: kadaka_powered
+theme: kadaka
+region: footer
+weight: -10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,27 @@
+uuid: 03e83807-149e-4816-a6ec-b5f089215b12
+langcode: et
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - kadaka
+_core:
+  default_config_hash: R2K_qX0ZUMbUL6ie_-S9tZVjvqmlWKlscikgeRv9vhw
+id: kadaka_account_menu
+theme: kadaka
+region: navigation_collapsible
+weight: -5
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Kasutaja konto menüü'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

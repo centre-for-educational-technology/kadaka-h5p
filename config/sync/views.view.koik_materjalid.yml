@@ -48,12 +48,17 @@ display:
           sort_asc_label: Kasvav
           sort_desc_label: Kahanev
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 20
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Esimene'
+            last: 'Viimane »'
           expose:
             items_per_page: false
             items_per_page_label: 'Kirjeid lehel'
@@ -62,9 +67,7 @@ display:
             items_per_page_options_all_label: '- Kõik -'
             offset: false
             offset_label: Nihe
-          tags:
-            previous: ‹‹
-            next: ››
+          quantity: 9
       style:
         type: table
         options:

@@ -1,0 +1,20 @@
+uuid: d197652e-e58b-440b-8afa-3dd2f6d52b54
+langcode: et
+status: true
+dependencies:
+  theme:
+    - kadaka
+_core:
+  default_config_hash: ffxthelqQF8xcr4GTG4HlaNNsluiHftN0pujmQpW0bQ
+id: kadaka_local_actions
+theme: kadaka
+region: header
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

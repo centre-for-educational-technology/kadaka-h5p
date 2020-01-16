@@ -1,0 +1,22 @@
+uuid: 6d77b0a3-3024-4622-8a22-df5400252b94
+langcode: et
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - kadaka
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: kadaka_help
+theme: kadaka
+region: help
+weight: -8
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

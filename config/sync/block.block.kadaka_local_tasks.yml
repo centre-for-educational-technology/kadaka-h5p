@@ -1,0 +1,22 @@
+uuid: cc7f7165-6bcb-45ed-b877-4be03ef45818
+langcode: et
+status: true
+dependencies:
+  theme:
+    - kadaka
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: kadaka_local_tasks
+theme: kadaka
+region: header
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

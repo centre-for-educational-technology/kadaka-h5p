@@ -1,0 +1,22 @@
+uuid: f33454dc-7e11-4bf5-9b0b-d244aedc34f2
+langcode: et
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kadaka
+_core:
+  default_config_hash: fNNLN48MSGSLiqwIFywCuxH2Dk_IxDbaP0kYhg_IPrg
+id: kadaka_content
+theme: kadaka
+region: content
+weight: -7
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

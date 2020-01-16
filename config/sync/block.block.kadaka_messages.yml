@@ -1,0 +1,22 @@
+uuid: e2fa62ed-3428-45e1-8091-fa43c647e06b
+langcode: et
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - kadaka
+_core:
+  default_config_hash: 9RnnTUBcn0WRWXfrGOnId2H0Q31uQUeu_F5TnDxl2yg
+id: kadaka_messages
+theme: kadaka
+region: header
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

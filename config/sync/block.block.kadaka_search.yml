@@ -1,0 +1,23 @@
+uuid: 218f727a-8ccf-48eb-96b8-e3979eaadca4
+langcode: et
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - kadaka
+_core:
+  default_config_hash: F3d5hyAFunLh4PhGviJF019fHn1Z3_zy5gzsQ0tX1K0
+id: kadaka_search
+theme: kadaka
+region: sidebar_second
+weight: -6
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+  page_id: ''
+visibility: {  }
