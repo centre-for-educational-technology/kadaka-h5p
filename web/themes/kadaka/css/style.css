@@ -23,6 +23,26 @@ body {
   padding: 20px 30px 20px 30px;
 }
 
-.navbar-nav li:hover, .navbar-brand:hover {
+.navbar-nav li:hover, .navbar-brand:hover, .dropdown-language-item.btn-group.dropdown .btn-default:hover {
   outline: 2px solid #869998;
+}
+
+.dropdown-language-item.btn-group.dropdown {
+  float: right;
+}
+
+.dropdown-language-item.btn-group.dropdown .btn-default {
+  background: transparent;
+  border: none;
+  padding: 15px;
+  color: #777;
+}
+
+.dropdown-language-item.btn-group.dropdown .btn-default:hover {
+  background:transparent;
+  color: #000;
+}
+
+#block-dropdownlanguage {
+  height: 0px;
 }

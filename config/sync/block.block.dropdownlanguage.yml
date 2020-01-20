@@ -1,22 +1,24 @@
-uuid: 1cdb6424-e07c-44e8-bd0f-8602a247a86d
+uuid: 44ba9479-7ea8-4190-8553-28b54650a030
 langcode: et
 status: true
 dependencies:
   module:
+    - dropdown_language
     - language
   theme:
     - kadaka
-id: kadaka_keelevahetaja
+id: dropdownlanguage
 theme: kadaka
-region: navigation
-weight: -6
+region: navigation_collapsible
+weight: -5
 provider: null
-plugin: 'language_block:language_interface'
+plugin: 'dropdown_language:language_interface'
 settings:
-  id: 'language_block:language_interface'
-  label: 'Keele vahetaja'
-  provider: language
+  id: 'dropdown_language:language_interface'
+  label: 'Dropdown Language'
+  provider: dropdown_language
   label_display: '0'
+  labels: null
 visibility:
   language:
     id: language
