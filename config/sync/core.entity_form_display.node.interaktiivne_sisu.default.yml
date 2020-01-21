@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.interaktiivne_sisu.field_h5p
+    - field.field.node.interaktiivne_sisu.field_kategooria
     - node.type.interaktiivne_sisu
   module:
     - h5peditor
@@ -24,6 +25,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: h5p_editor
+    region: content
+  field_kategooria:
+    weight: 122
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   langcode:
     type: language_select

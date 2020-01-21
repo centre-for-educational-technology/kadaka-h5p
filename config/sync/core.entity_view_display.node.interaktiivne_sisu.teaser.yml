@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.interaktiivne_sisu.field_h5p
+    - field.field.node.interaktiivne_sisu.field_kategooria
     - node.type.interaktiivne_sisu
   module:
     - user
@@ -18,4 +20,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  field_h5p: true
+  field_kategooria: true
   langcode: true

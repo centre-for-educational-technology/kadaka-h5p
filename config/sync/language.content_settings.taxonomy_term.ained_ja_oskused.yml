@@ -1,0 +1,11 @@
+uuid: 6282d0f6-21dc-438c-a4fd-d1b156e2b563
+langcode: et
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ained_ja_oskused
+id: taxonomy_term.ained_ja_oskused
+target_entity_type_id: taxonomy_term
+target_bundle: ained_ja_oskused
+default_langcode: ru
+language_alterable: false
