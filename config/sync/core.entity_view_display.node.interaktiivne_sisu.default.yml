@@ -8,6 +8,7 @@ dependencies:
     - node.type.interaktiivne_sisu
   module:
     - h5p
+    - term_reference_tree
     - user
 id: node.interaktiivne_sisu.default
 targetEntityType: node
@@ -24,15 +25,14 @@ content:
   field_kategooria:
     weight: 102
     label: above
-    settings:
-      link: true
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_label
+    type: term_reference_tree
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   langcode: true

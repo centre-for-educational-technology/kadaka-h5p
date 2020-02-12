@@ -9,6 +9,7 @@ dependencies:
   module:
     - h5peditor
     - path
+    - term_reference_tree
 id: node.interaktiivne_sisu.default
 targetEntityType: node
 bundle: interaktiivne_sisu
@@ -29,12 +30,13 @@ content:
   field_kategooria:
     weight: 122
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      start_minimized: true
+      select_parents: true
+      cascading_selection: 0
+      max_depth: 0
+      leaves_only: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: term_reference_tree
     region: content
   langcode:
     type: language_select

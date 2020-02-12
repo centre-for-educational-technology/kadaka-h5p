@@ -41,6 +41,8 @@ module:
   shortcut: 0
   system: 0
   taxonomy: 0
+  taxonomy_manager: 0
+  term_reference_tree: 0
   text: 0
   toolbar: 0
   tour: 0
