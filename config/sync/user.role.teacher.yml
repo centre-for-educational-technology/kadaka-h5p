@@ -1,0 +1,22 @@
+uuid: 984f1fe3-84dc-4807-9569-6213ea8d7c55
+langcode: et
+status: true
+dependencies: {  }
+id: teacher
+label: Teacher
+weight: 3
+is_admin: null
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access editor'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'create interaktiivne_sisu content'
+  - 'delete own interaktiivne_sisu content'
+  - 'edit own interaktiivne_sisu content'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'
+  - 'view own unpublished content'
