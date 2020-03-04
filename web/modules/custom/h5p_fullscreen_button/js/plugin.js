@@ -31,9 +31,9 @@ self.t = function(key, vars) {
     var type =  "fullscreen";
 
     $('ul.h5p-actions')
-    .append('<li class="h5p-button h5p-noselect h5p-' + type + '" role="button" tabindex="0" title="' + self.t(type + 'Description') + '">' + self.t(type) + '</li>');
-    $('ul.h5p-actions .h5p-' + type).click(function() {
-      window.top.location.href = url;
+    .append('<li class="h5p-button h5p-noselect h5p-' + type + '" role="button" tabindex="0" title="' + self.t(type + 'Description') + '">' + self.t(type) + '</li>')
+    .click(function() {
+      window.open(url, "_blank");
     });
-  })
+  });
 })(H5P.jQuery);

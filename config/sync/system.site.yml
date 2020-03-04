@@ -9,6 +9,6 @@ page:
 admin_compact_mode: false
 weight_select_max: 100
 langcode: et
-default_langcode: et
+default_langcode: ru
 _core:
   default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
