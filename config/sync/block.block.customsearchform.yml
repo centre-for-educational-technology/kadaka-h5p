@@ -1,0 +1,139 @@
+uuid: 25f69bd0-d6e9-4179-a1b0-c8658b812ee4
+langcode: et
+status: true
+dependencies:
+  module:
+    - custom_search
+    - node
+  theme:
+    - kadaka
+id: customsearchform
+theme: kadaka
+region: content
+weight: 0
+provider: null
+plugin: custom_search
+settings:
+  id: custom_search
+  label: 'Otsi materjale'
+  provider: custom_search
+  label_display: visible
+  search_box:
+    label_visibility: false
+    label: 'Otsi sellelt lehelt'
+    placeholder: ''
+    title: 'Sisesta märksõnad, mida soovid otsida.'
+    size: 15
+    max_length: 128
+    weight: -9
+    region: block
+  submit:
+    text: Otsi
+    image_path: ''
+    weight: 9
+    region: block
+  content:
+    types:
+      article: '0'
+      interaktiivne_sisu: '0'
+      page: '0'
+    other:
+      user_search: '0'
+    selector:
+      type: select
+      label_visibility: true
+      label: 'Search for'
+    any:
+      text: '- Kõik -'
+      restricts: false
+      force: false
+    excluded:
+      article: '0'
+      interaktiivne_sisu: '0'
+      page: '0'
+    weight: -8
+    region: block
+    page: node_search
+  criteria:
+    or:
+      display: false
+      label: 'Sisaldab vähemalt üht sõnadest'
+      weight: 4
+      region: block
+    phrase:
+      display: false
+      label: 'Sisaldab fraasi'
+      weight: 5
+      region: block
+    negative:
+      display: false
+      label: 'Ei sisalda ühtki sõnadest'
+      weight: 6
+      region: block
+  languages:
+    languages:
+      current: '0'
+      et: '0'
+      ru: '0'
+      und: '0'
+      zxx: '0'
+    selector:
+      type: selectmultiple
+      label_visibility: true
+      label: Keeled
+    any:
+      text: '- Kõik -'
+      restricts: false
+      force: false
+    weight: 7
+    region: block
+  paths:
+    list: ''
+    selector:
+      type: select
+      label_visibility: true
+      label: 'Customize your search'
+    separator: +
+    weight: 8
+    region: block
+  taxonomy:
+    node_search:
+      type: disabled
+      depth: 0
+      label_visibility: true
+      label: Sisu
+      all_text: '- Kõik -'
+      region: block
+      weight: -7
+    user_search:
+      type: disabled
+      depth: 0
+      label_visibility: true
+      label: Kasutajad
+      all_text: '- Kõik -'
+      region: block
+      weight: -6
+    ained_ja_oskused:
+      type: select
+      depth: null
+      label_visibility: false
+      label: ''
+      all_text: '-Any-'
+      weight: null
+      region: null
+    tags:
+      type: disabled
+      depth: null
+      label_visibility: false
+      label: ''
+      all_text: '-Any-'
+      weight: null
+      region: null
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

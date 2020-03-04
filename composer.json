@@ -23,6 +23,7 @@
         "drupal/bootstrap": "^3.20",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7.0",
+        "drupal/custom_search": "^1.0@beta",
         "drupal/dropdown_language": "^2.3",
         "drupal/h5p": "^1.0@RC",
         "drupal/h5peditor": "^1.0@RC",

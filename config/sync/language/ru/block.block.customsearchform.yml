@@ -1,0 +1,25 @@
+settings:
+  label: 'Поиск материалов'
+  search_box:
+    label: 'Поиск на этой странице'
+    title: 'Введите ключевые слова, которые вы хотите найти'
+  submit:
+    text: Поиск
+  content:
+    selector:
+      label: 'Поиск селектора'
+  criteria:
+    or:
+      label: 'Содержит хотя бы одно из слов'
+    phrase:
+      label: 'Содержит фразу'
+    negative:
+      label: 'Не содержит слов'
+  languages:
+    selector:
+      label: Языки
+  taxonomy:
+    node_search:
+      label: Содержание
+    user_search:
+      label: Пользователи
