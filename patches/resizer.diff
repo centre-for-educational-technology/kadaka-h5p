@@ -1,0 +1,25 @@
+diff --git a/src/Controller/H5PEmbed.php b/src/Controller/H5PEmbed.php
+index d8d4b5a..a18e2c4 100644
+--- a/src/Controller/H5PEmbed.php
++++ b/src/Controller/H5PEmbed.php
+@@ -75,6 +75,20 @@ class H5PEmbed extends ControllerBase {
+     include $h5p_module_path . '/vendor/h5p/h5p-core/embed.php';
+     $response['#markup'] = ob_get_clean();
+ 
++    $response['#markup'] .= "<script>
++      timer = setInterval(function() {
++        var content = document.getElementsByClassName('h5p-content')[0];
++        var ratio = content.clientWidth / content.clientHeight;
++        var browserRatio = window.innerWidth / window.innerHeight;
++
++        if (ratio < browserRatio - 0.1) {
++          var newRatio = ratio / browserRatio;
++          document.getElementsByTagName('html')[0].style.width = String(window.innerWidth * newRatio) + 'px';
++        }
++
++      }, 3000);
++    </script>";
++
+     return new HtmlResponse($response);
+   }
+ 

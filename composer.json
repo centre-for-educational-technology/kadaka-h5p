@@ -84,6 +84,11 @@
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
             }
+        },
+        "patches": {
+            "drupal/h5p": {
+                "Resize h5p fullscreen view to always fit entire content type vertically": "patches/resizer.diff"
+            }
         }
     }
 }
