@@ -2,7 +2,7 @@ diff --git a/src/Controller/H5PEmbed.php b/src/Controller/H5PEmbed.php
 index d8d4b5a..a18e2c4 100644
 --- a/src/Controller/H5PEmbed.php
 +++ b/src/Controller/H5PEmbed.php
-@@ -75,6 +75,20 @@ class H5PEmbed extends ControllerBase {
+@@ -75,6 +75,21 @@ class H5PEmbed extends ControllerBase {
      include $h5p_module_path . '/vendor/h5p/h5p-core/embed.php';
      $response['#markup'] = ob_get_clean();
  
@@ -15,6 +15,7 @@ index d8d4b5a..a18e2c4 100644
 +        if (ratio < browserRatio - 0.1) {
 +          var newRatio = ratio / browserRatio;
 +          document.getElementsByTagName('html')[0].style.width = String(window.innerWidth * newRatio) + 'px';
++          H5P.trigger(H5P.instances[0], 'resize');
 +        }
 +
 +      }, 3000);
