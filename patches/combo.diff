@@ -1,3 +1,11 @@
+diff --git a/img/confused_face.png b/img/confused_face.png
+new file mode 100644
+index 0000000..8c6153e
+Binary files /dev/null and b/img/confused_face.png differ
+diff --git a/img/happy_face.png b/img/happy_face.png
+new file mode 100644
+index 0000000..ddd3659
+Binary files /dev/null and b/img/happy_face.png differ
 diff --git a/mypatch.diff b/mypatch.diff
 new file mode 100644
 index 0000000..e69de29

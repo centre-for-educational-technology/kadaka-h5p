@@ -87,7 +87,7 @@
         },
         "patches": {
             "drupal/h5p": {
-                "Resize h5p fullscreen view to always fit entire content type vertically": "patches/resize_and_emoji.diff"
+                "Resize h5p fullscreen view to always fit entire content type vertically": "patches/combo.diff"
             }
         }
     }
