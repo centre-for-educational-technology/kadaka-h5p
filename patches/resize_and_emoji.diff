@@ -1,0 +1,66 @@
+diff --git a/mypatch.diff b/mypatch.diff
+new file mode 100644
+index 0000000..e69de29
+diff --git a/src/Controller/H5PEmbed.php b/src/Controller/H5PEmbed.php
+index d8d4b5a..b0dae07 100644
+--- a/src/Controller/H5PEmbed.php
++++ b/src/Controller/H5PEmbed.php
+@@ -75,6 +75,58 @@ class H5PEmbed extends ControllerBase {
+     include $h5p_module_path . '/vendor/h5p/h5p-core/embed.php';
+     $response['#markup'] = ob_get_clean();
+ 
++    // resize content that is too large to fit entirely in viewport
++    $response['#markup'] .= "<script>
++      timer = setInterval(function() {
++        var content = document.getElementsByClassName('h5p-container')[0];
++        var ratio = content.clientWidth / content.clientHeight;
++        var browserRatio = window.innerWidth / (window.innerHeight - 25);
++
++        if (ratio < browserRatio - 0.2) {
++          var newRatio = ratio / browserRatio;
++          var html = document.getElementsByTagName('html')[0];
++          html.style.width = String(window.innerWidth * newRatio) + 'px';
++          html.style.position = 'absolute';
++          html.style.left = '50%';
++          html.style.transform = 'translateX(-50%)';
++          H5P.trigger(H5P.instances[0], 'resize');
++        }
++
++      }, 3000);
++    </script>";
++
++    // show a happy face or confused face depending on result
++    $response['#markup'] .= "<script>
++      var showButton = function(data) {
++        var oldImage = document.getElementById('success-image');
++        if (oldImage) {
++          oldImage.parentNode.removeChild(oldImage);
++        }
++        var image = document.createElement('IMG');
++        image.setAttribute('src', data);
++        image.id = 'success-image';
++        image.style.position = 'absolute';
++        image.style.top = '50%';
++        image.style.left = '50%';
++        image.style.transform = 'translate(-50%, -50%)';
++        image.style.zIndex = 50;
++        var body = document.getElementsByTagName('body')[0];
++        body.appendChild(image);
++      }
++      H5P.externalDispatcher.on('xAPI', function(event){
++        if (event.getMaxScore() > 0) {
++          if (event.getScore() === event.getMaxScore()) {
++            console.log('oi kui tubli ssa oled');
++            showButton('" . base_path() . $h5p_module_path . '/img/happy_face.png' . "');
++          }
++          else {
++            console.log('mis küll läks valesti? :thinking:');
++            showButton('" . base_path() . $h5p_module_path . '/img/confused_face.png' . "');
++          }
++        }
++      });
++    </script>";
++
+     return new HtmlResponse($response);
+   }
+ 
