@@ -1,0 +1,66 @@
+diff --git a/mypatch.diff b/mypatch.diff
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/src/Controller/H5PEmbed.php b/src/Controller/H5PEmbed.php
+index b0dae07..cdb1dcb 100644
+--- a/src/Controller/H5PEmbed.php
++++ b/src/Controller/H5PEmbed.php
+@@ -97,31 +97,51 @@ class H5PEmbed extends ControllerBase {
+ 
+     // show a happy face or confused face depending on result
+     $response['#markup'] .= "<script>
+-      var showButton = function(data) {
+-        var oldImage = document.getElementById('success-image');
++      var removeImage = function() {
++        var oldImage = document.getElementById('success-div');
+         if (oldImage) {
+           oldImage.parentNode.removeChild(oldImage);
+         }
++      }
++
++      var showImage = function(data) {
++        removeImage();
++
++        var div = document.createElement('DIV');
++        div.id = 'success-div';
++        div.style.position = 'absolute';
++        div.style.width = '100%';
++        div.style.height = '100%';
++        div.style.left = 0;
++        div.style.top = 0;
++        div.style.zIndex = 100;
++        div.style.display = 'inline-block';
++        div.style.backgroundColor = 'rgba(0,0,0,0.75)';
++
+         var image = document.createElement('IMG');
+         image.setAttribute('src', data);
+         image.id = 'success-image';
+-        image.style.position = 'absolute';
++        image.style.position = 'relative';
+         image.style.top = '50%';
+         image.style.left = '50%';
+         image.style.transform = 'translate(-50%, -50%)';
+-        image.style.zIndex = 50;
++        image.style.zIndex = 150;
++
++        div.onclick = removeImage;
++        div.appendChild(image);
+         var body = document.getElementsByTagName('body')[0];
+-        body.appendChild(image);
++        body.appendChild(div);
+       }
++
+       H5P.externalDispatcher.on('xAPI', function(event){
+         if (event.getMaxScore() > 0) {
+           if (event.getScore() === event.getMaxScore()) {
+             console.log('oi kui tubli ssa oled');
+-            showButton('" . base_path() . $h5p_module_path . '/img/happy_face.png' . "');
++            showImage('" . base_path() . $h5p_module_path . '/img/happy_face.png' . "');
+           }
+           else {
+             console.log('mis küll läks valesti? :thinking:');
+-            showButton('" . base_path() . $h5p_module_path . '/img/confused_face.png' . "');
++            showImage('" . base_path() . $h5p_module_path . '/img/confused_face.png' . "');
+           }
+         }
+       });

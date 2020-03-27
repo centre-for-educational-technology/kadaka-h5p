@@ -87,7 +87,8 @@
         },
         "patches": {
             "drupal/h5p": {
-                "Resize h5p fullscreen view to always fit entire content type vertically": "patches/combo.diff"
+                "Resize h5p fullscreen view to always fit entire content type vertically and add success smileys": "patches/combo.diff",
+                "Add semi-transparent background to smileys that removes smileys when clicked": "patches/background.diff"
             }
         }
     }
