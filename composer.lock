@@ -2833,9 +2833,6 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-2.6",
                     "datestamp": "1584793087",
@@ -2877,15 +2874,12 @@
                 "shasum": "16d9f920e09c082a3b3f2f2ab98902cbc85957db"
             },
             "require": {
-                "drupal/core": "*",
+                "drupal/core": "^8",
                 "h5p/h5p-core": "1.24.0",
                 "h5p/h5p-editor": "1.24.1"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.0-rc17",
                     "datestamp": "1572512585",
@@ -2936,13 +2930,10 @@
             "version": "1.0.0-rc17",
             "require": {
                 "drupal/core": "~8.0",
-                "drupal/h5p": "self.version"
+                "drupal/h5p": "*"
             },
             "type": "metapackage",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.0-rc17",
                     "datestamp": "1572512585",
@@ -2999,13 +2990,10 @@
                 "shasum": "7becfad1cad0d26f471b8e097afcadde94a9f266"
             },
             "require": {
-                "drupal/core": "*"
+                "drupal/core": "^8"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.0-alpha2",
                     "datestamp": "1538074980",
@@ -3026,12 +3014,32 @@
                     "role": "Maintainer"
                 },
                 {
+                    "name": "JacobSanford",
+                    "homepage": "https://www.drupal.org/user/806538"
+                },
+                {
+                    "name": "VladimirAus",
+                    "homepage": "https://www.drupal.org/user/673120"
+                },
+                {
+                    "name": "alesbencina",
+                    "homepage": "https://www.drupal.org/user/3558110"
+                },
+                {
+                    "name": "dragan_bp",
+                    "homepage": "https://www.drupal.org/user/3578037"
+                },
+                {
                     "name": "joaogarin",
                     "homepage": "https://www.drupal.org/user/612814"
                 },
                 {
                     "name": "kalinchernev",
                     "homepage": "https://www.drupal.org/user/231185"
+                },
+                {
+                    "name": "klausi",
+                    "homepage": "https://www.drupal.org/user/262198"
                 },
                 {
                     "name": "mh86",
@@ -3060,13 +3068,10 @@
                 "shasum": "c43a32b9d493d9501c15eb50318f685dc18a22b2"
             },
             "require": {
-                "drupal/core": "*"
+                "drupal/core": "^8"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
                     "version": "8.x-1.0-alpha3",
                     "datestamp": "1576160884",
@@ -3092,6 +3097,10 @@
                 {
                     "name": "MoustafaEid",
                     "homepage": "https://www.drupal.org/user/1126928"
+                },
+                {
+                    "name": "VladimirAus",
+                    "homepage": "https://www.drupal.org/user/673120"
                 },
                 {
                     "name": "alex_optim",
@@ -7733,16 +7742,16 @@
         },
         {
             "name": "composer/ca-bundle",
-            "version": "1.2.9",
+            "version": "1.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/ca-bundle.git",
-                "reference": "78a0e288fdcebf92aa2318a8d3656168da6ac1a5"
+                "reference": "0b072d51c5a9c6f3412f7ea3ab043d6603cb2582"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/78a0e288fdcebf92aa2318a8d3656168da6ac1a5",
-                "reference": "78a0e288fdcebf92aa2318a8d3656168da6ac1a5",
+                "url": "https://api.github.com/repos/composer/ca-bundle/zipball/0b072d51c5a9c6f3412f7ea3ab043d6603cb2582",
+                "reference": "0b072d51c5a9c6f3412f7ea3ab043d6603cb2582",
                 "shasum": ""
             },
             "require": {
@@ -7754,7 +7763,7 @@
                 "phpstan/phpstan": "^0.12.55",
                 "psr/log": "^1.0",
                 "symfony/phpunit-bridge": "^4.2 || ^5",
-                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0"
+                "symfony/process": "^2.5 || ^3.0 || ^4.0 || ^5.0 || ^6.0"
             },
             "type": "library",
             "extra": {
@@ -7800,20 +7809,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-12T12:10:35+00:00"
+            "time": "2021-09-25T20:32:43+00:00"
         },
         {
             "name": "composer/composer",
-            "version": "1.10.21",
+            "version": "1.10.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "04021432f4a9cbd9351dd166b8c193f42c36a39c"
+                "reference": "eb3bae3d3de2e4abd94fa56fbe18355aba0b47ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/04021432f4a9cbd9351dd166b8c193f42c36a39c",
-                "reference": "04021432f4a9cbd9351dd166b8c193f42c36a39c",
+                "url": "https://api.github.com/repos/composer/composer/zipball/eb3bae3d3de2e4abd94fa56fbe18355aba0b47ae",
+                "reference": "eb3bae3d3de2e4abd94fa56fbe18355aba0b47ae",
                 "shasum": ""
             },
             "require": {
@@ -7894,7 +7903,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-04-01T07:16:35+00:00"
+            "time": "2021-10-05T07:44:27+00:00"
         },
         {
             "name": "composer/spdx-licenses",
@@ -8410,16 +8419,16 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "5.2.10",
+            "version": "5.2.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/justinrainbow/json-schema.git",
-                "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b"
+                "reference": "2ab6744b7296ded80f8cc4f9509abbff393399aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
-                "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/2ab6744b7296ded80f8cc4f9509abbff393399aa",
+                "reference": "2ab6744b7296ded80f8cc4f9509abbff393399aa",
                 "shasum": ""
             },
             "require": {
@@ -8472,7 +8481,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2020-05-27T16:41:55+00:00"
+            "time": "2021-07-22T09:24:00+00:00"
         },
         {
             "name": "mikey179/vfsstream",
@@ -9921,16 +9930,16 @@
         },
         {
             "name": "seld/phar-utils",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/phar-utils.git",
-                "reference": "8674b1d84ffb47cc59a101f5d5a3b61e87d23796"
+                "reference": "749042a2315705d2dfbbc59234dd9ceb22bf3ff0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/phar-utils/zipball/8674b1d84ffb47cc59a101f5d5a3b61e87d23796",
-                "reference": "8674b1d84ffb47cc59a101f5d5a3b61e87d23796",
+                "url": "https://api.github.com/repos/Seldaek/phar-utils/zipball/749042a2315705d2dfbbc59234dd9ceb22bf3ff0",
+                "reference": "749042a2315705d2dfbbc59234dd9ceb22bf3ff0",
                 "shasum": ""
             },
             "require": {
@@ -9961,7 +9970,7 @@
             "keywords": [
                 "phar"
             ],
-            "time": "2020-07-07T18:42:57+00:00"
+            "time": "2021-08-19T21:01:38+00:00"
         },
         {
             "name": "sirbrillig/phpcs-variable-analysis",
