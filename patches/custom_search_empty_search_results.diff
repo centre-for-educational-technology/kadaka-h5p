@@ -1,0 +1,20 @@
+diff --git a/templates/custom-search-results.html.twig b/templates/custom-search-results.html.twig
+index a2335c8..09cb443 100644
+--- a/templates/custom-search-results.html.twig
++++ b/templates/custom-search-results.html.twig
+@@ -31,7 +31,7 @@
+       {%- endif -%}
+       <{{ list_type }}{{ attributes }}>
+         {%- for item in items -%}
+-          <li{{ item.attributes }}>{{ item.value }}</li>
++          <li{{ item.attributes }}>{{ item|slice(0, 2) }}</li>
+         {%- endfor -%}
+       </{{ list_type }}>
+       {%- if filter_position=='below' -%}
+@@ -41,4 +41,4 @@
+       {{- empty -}}
+     {%- endif -%}
+   </div>
+-{%- endif %}
+\ No newline at end of file
++{%- endif %}

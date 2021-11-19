@@ -112,6 +112,9 @@
             "drupal/h5p": {
                 "Resize h5p fullscreen view to always fit entire content type vertically and add success smileys": "patches/combo.diff",
                 "Add semi-transparent background to smileys that removes smileys when clicked": "patches/background.diff"
+            },
+            "drupal/custom_search": {
+                "Patch search results list so that it would work with Bootstrap 3 based themes": "patches/custom_search_empty_search_results.diff"
             }
         }
     }
