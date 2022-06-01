@@ -6,7 +6,7 @@
 function h5p_fullscreen_button_h5p_scripts_alter(&$scripts, $libraries, $mode) {
   if ($mode == 'iframe') {
     $scripts []= (object) [
-      'path' => drupal_get_path('module', 'h5p_fullscreen_button') . '/js/plugin.js',
+      'path' => \Drupal::service('extension.path.resolver')->getPath('module', 'h5p_fullscreen_button') . '/js/plugin.js',
       'version' => '?v=1.0.31'
     ];
   }
@@ -18,7 +18,7 @@ function h5p_fullscreen_button_h5p_scripts_alter(&$scripts, $libraries, $mode) {
 function h5p_fullscreen_button_h5p_styles_alter(array &$styles, array $libraries, string $mode) {
   // TODO Make sure that styles are only loaded in correct context
   $styles[] = (object) [
-    'path' => drupal_get_path('module', 'h5p_fullscreen_button') . '/css/fullscreenbutton.css',
+    'path' => \Drupal::service('extension.path.resolver')->getPath('module', 'h5p_fullscreen_button') . '/css/fullscreenbutton.css',
     'version' => '?v=1.0.0',
   ];
 }
