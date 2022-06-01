@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "php": ">=7.0.8",
+        "php": ">=7.4.0",
         "composer/installers": "^1.7",
         "cweagans/composer-patches": "^1.6.5",
         "drupal/bootstrap": "^3.20",
@@ -26,6 +26,7 @@
         "drupal/dropdown_language": "^2.3",
         "drupal/h5p": "^1.0@RC",
         "drupal/h5peditor": "^1.0@RC",
+        "drupal/jquery_ui": "^1.4",
         "drupal/taxonomy_manager": "^2.0",
         "drupal/term_reference_tree": "^1.0",
         "drush/drush": "^10.0.0",
@@ -43,7 +44,13 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "zaporylie/composer-drupal-optimizations": true
+        }
     },
     "autoload": {
         "classmap": [
