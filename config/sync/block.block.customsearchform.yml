@@ -16,8 +16,8 @@ plugin: custom_search
 settings:
   id: custom_search
   label: 'Otsi materjale'
-  provider: custom_search
   label_display: visible
+  provider: custom_search
   search_box:
     label_visibility: false
     label: 'Otsi sellelt lehelt'
@@ -33,6 +33,7 @@ settings:
     weight: 9
     region: block
   content:
+    page: node_search
     types:
       article: '0'
       interaktiivne_sisu: '0'
@@ -53,7 +54,39 @@ settings:
       page: '0'
     weight: -8
     region: block
-    page: node_search
+  taxonomy:
+    node_search:
+      type: disabled
+      depth: 0
+      label_visibility: true
+      label: Sisu
+      all_text: '- Kõik -'
+      weight: -7
+      region: block
+    user_search:
+      type: disabled
+      depth: 0
+      label_visibility: true
+      label: Kasutajad
+      all_text: '- Kõik -'
+      weight: -6
+      region: block
+    ained_ja_oskused:
+      type: select
+      depth: null
+      label_visibility: false
+      label: ''
+      all_text: '-Any-'
+      weight: null
+      region: null
+    tags:
+      type: disabled
+      depth: null
+      label_visibility: false
+      label: ''
+      all_text: '-Any-'
+      weight: null
+      region: null
   criteria:
     or:
       display: false
@@ -88,52 +121,19 @@ settings:
     weight: 7
     region: block
   paths:
-    list: ''
     selector:
       type: select
       label_visibility: true
       label: 'Customize your search'
+    list: ''
     separator: +
     weight: 8
     region: block
-  taxonomy:
-    node_search:
-      type: disabled
-      depth: 0
-      label_visibility: true
-      label: Sisu
-      all_text: '- Kõik -'
-      region: block
-      weight: -7
-    user_search:
-      type: disabled
-      depth: 0
-      label_visibility: true
-      label: Kasutajad
-      all_text: '- Kõik -'
-      region: block
-      weight: -6
-    ained_ja_oskused:
-      type: select
-      depth: null
-      label_visibility: false
-      label: ''
-      all_text: '-Any-'
-      weight: null
-      region: null
-    tags:
-      type: disabled
-      depth: null
-      label_visibility: false
-      label: ''
-      all_text: '-Any-'
-      weight: null
-      region: null
 visibility:
-  node_type:
-    id: node_type
-    bundles:
-      page: page
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+    bundles:
+      page: page

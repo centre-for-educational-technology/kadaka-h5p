@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: IGyq02Zgyl_6WJczNqeYnXXQR_B_iM-yyOFXOUmVpLk
 id: locale
-label: Tõlge
+label: Перевод
 module: locale
 routes:
   -
@@ -16,60 +16,54 @@ tips:
   locale-overview:
     id: locale-overview
     plugin: text
-    label: 'Kasutajaliidese tõlge'
-    body: 'This page allows you to translate the user interface or modify existing translations. If you have installed your site initially in English, you must first add another language on the <a href="[site:url]admin/config/regional/language">Languages page</a>, in order to use this page.'
+    label: 'Перевод пользовательского интерфейса'
     weight: 1
+    body: 'На данной странице вы можете перевести пользовательский интерфейс или изменить существующий перевод. Если вы изначально установили сайт на Английском, перед началом использования этой страницы, вам необходимо добавить другой язык на странице <a href="[site:url]admin/config/regional/language">Языки</a>.'
   locale-language:
     id: locale-language
     plugin: text
-    label: 'Tõlke keel'
-    body: 'Vali keel, mida soovid tõlkida.'
+    label: 'Язык перевода'
     weight: 2
-    attributes:
-      data-id: edit-langcode
+    body: 'Выберите язык, который вы хотите перевести.'
+    selector: '#edit-langcode'
   locale-search:
     id: locale-search
     plugin: text
-    label: Search
-    body: 'Sisesta sõna või lause, mida soovid tõlkida. Lubatud on ka sõnaosa kasutamine.'
+    label: Поиск
     weight: 3
-    attributes:
-      data-id: edit-string
+    body: 'Введите опредёленное слово или предложение, которое необходимо перевести. Можно ввести только часть слова.'
+    selector: '#edit-string'
   locale-filter:
     id: locale-filter
     plugin: text
-    label: 'Filtreeri otsingutulemusi'
-    body: 'Kui soovid tõlkida midagi, mis pole veel tõlgitud, siis saad otsida tõlkimata sõnesid. Kui soovid muuta juba olemasolevat tõlget, siis peaksid otsima ainult tõlgitud sõnesid.'
+    label: 'Фильтрация результатов поиска'
     weight: 4
-    attributes:
-      data-id: edit-translation
+    body: 'Вы можете искать непереведённые строки, если вы хотите перевести что-нибудь ещё непереведённое. Если вы хотите изменить существующий перевод, вы можете искать только переведённые строки.'
+    selector: '#edit-translation'
   locale-submit:
     id: locale-submit
     plugin: text
-    label: 'Rakenda otsingutingimus'
-    body: 'Otsingukriteeriumi rakendamiseks kliki <em>Filtreeri</em> nupul.'
+    label: 'Применить критерий поиска'
     weight: 5
-    attributes:
-      data-id: edit-submit
+    body: 'Для применения выбранного критерия поиска, нажмите кнопку <em>Фильтр</em>.'
+    selector: '#edit-submit'
   locale-translate:
     id: locale-translate
     plugin: text
-    label: Tõlge
-    body: 'Saad kirjutada oma isikliku tõlke paremas tulbas olevatele tekstiväljadele. Selleks, et teksti õigesti tõlkida ürita aru saada millises kontekstis seda kasutatakse.'
+    label: Переводы
     weight: 6
-    attributes:
-      data-class: js-form-type-textarea
+    body: 'Вы можете написать свой собственный вариант перевода в текстовых полях правой колонки. Попробуйте выяснить, в каком контексте будет использоваться текст для того, чтобы перевести его как можно точнее.'
+    selector: .js-form-type-textarea
   locale-validate:
     id: locale-validate
     plugin: text
-    label: 'Valideeri tõlge'
-    body: 'Kui oled tõlkimise lõpetanud, vajuta <em>Salvesta tõlked</em> nuppu. Tõlked tuleb salvestada iga kord enne leheküljelt navigeerimist või uue otsingu teostamist.'
+    label: 'Подтверждение перевода'
     weight: 7
-    attributes:
-      data-id: edit-submit--2
+    body: 'После завершения ваших переводов нажмите кнопку <em>Сохранить переводы</em>. Необходимо сохранять переводы каждый раз перед изменением страницы или выполнением нового поиска.'
+    selector: '#edit-submit--2'
   locale-continue:
     id: locale-continue
     plugin: text
-    label: Jätkub
-    body: 'Antud tõlkeid kasutatakse saidi kasutajaliideses. Kui sa soovid neid kasutada mõnel teisel saidil või tõlkeprogrammis, saad need<a href="[site:url]admin/config/regional/translate/export">eksportida</a> .po failiks ja hiljem ka <a href="[site:url]admin/config/regional/translate/import">importida</a>.'
+    label: Продолжение
     weight: 8
+    body: 'Выполненные здесь переводы будут использоваться в пользовательском интерфейсе сайта. Если их необходимо использовать на другом сайте или отредактировать во внешнем редакторе переводов, <a href="[site:url]admin/config/regional/translate/export">экспортируйте их</a> в po-файл, а затем <a href="[site:url]admin/config/regional/translate/import">импортируйте их</a>.'

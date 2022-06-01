@@ -1,7 +1,19 @@
 uuid: 984f1fe3-84dc-4807-9569-6213ea8d7c55
 langcode: et
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+    - node.type.interaktiivne_sisu
+  module:
+    - comment
+    - contact
+    - filter
+    - h5peditor
+    - node
+    - search
+    - shortcut
+    - system
 id: teacher
 label: Teacher
 weight: 3

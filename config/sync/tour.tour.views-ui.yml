@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: c-HMyZwgeP8H6AITDcq4hznePkd7azpe8xl_WTnx2O0
 id: views-ui
-label: 'Vaate muutmisleht'
+label: 'Страница редактирования представления'
 module: views_ui
 routes:
   -
@@ -18,80 +18,71 @@ tips:
   views-main:
     id: views-main
     plugin: text
-    label: 'Halda vaate seadeid'
-    body: 'Vaata või muuda seadistust.'
+    label: 'Управление настройками представления'
     weight: 1
+    body: 'Просмотр или редактирование конфигурации.'
   views-ui-displays:
     id: views-ui-displays
     plugin: text
-    label: 'Nähtav selles vaates'
-    body: 'A display is a way of outputting the results, e.g., as a page or a block. A view can contain multiple displays, which are listed here. The active display is highlighted.'
+    label: 'Отображения в этом представлении'
     weight: 2
-    attributes:
-      data-id: views-display-top
+    body: 'Отображение - это способ вывода результатов, например, в виде страницы или блока. Представление может содержать несколько отображений, которые перечислены здесь. Активное отображение подсвечено.'
+    selector: '#views-display-top'
   views-ui-view-admin:
     id: views-ui-view-admin
     plugin: text
-    label: 'Vaate haldamine'
-    body: 'Perform administrative tasks, including adding a description and creating a clone. Click the drop-down button to view the available options.'
+    label: 'Администрирование представления'
     weight: 3
-    location: left
-    attributes:
-      data-id: views-display-extra-actions
+    body: 'Выполнение административных задач, включающие добавление описания и создание копии. Нажмите раскрывающуюся кнопку для просмотра доступных действий.'
+    selector: '#views-display-extra-actions'
+    position: left-start
   views-ui-format:
     id: views-ui-format
     plugin: text
-    label: Väljundvorming
-    body: 'Choose how to output results. E.g., choose <em>Content</em> to output each item completely, using your configured display settings. Or choose <em>Fields</em>, which allows you to output only specific fields for each result. Additional formats can be added by installing modules to <em>extend</em> Drupal''s base functionality.'
+    label: 'Формат вывода'
     weight: 4
-    attributes:
-      data-class: views-ui-display-tab-bucket.format
+    body: 'Выберите способ вывода результатов. Например, выберите <em>Содержимое</em>, для вывода каждого элемента полностью, используя настроенные параметры отображения. Или выберите <em>Поля</em>, с помощью которых можно выводить только определённые поля для каждого результата. Дополнительные форматы могут быть добавлены с помощью установки модулей для <em>расширения</em> функциональности Drupal.'
+    selector: .views-ui-display-tab-bucket.format
   views-ui-fields:
     id: views-ui-fields
     plugin: text
-    label: Väljad
-    body: 'If this view uses fields, they are listed here. You can click on a field to configure it.'
+    label: Поля
     weight: 5
-    attributes:
-      data-class: views-ui-display-tab-bucket.field
+    body: 'Если это представление использует поля, они будут перечислены здесь. Нажмите на поле для того, чтобы настроить его.'
+    selector: .views-ui-display-tab-bucket.field
   views-ui-filter:
     id: views-ui-filter
     plugin: text
-    label: 'Filtreeri vaadet'
-    body: 'Add filters to limit the results in the output. E.g., to only show content that is <em>published</em>, you would add a filter for <em>Published</em> and select <em>Yes</em>.'
+    label: 'Фильтрация представления'
     weight: 6
-    attributes:
-      data-class: views-ui-display-tab-bucket.filter
+    body: 'Добавьте фильтры для ограничения вывода результатов. Например, для отображения только <em>опубликованных</em> материалов, необходимо добавить фильтр <em>Опубликовано</em> и выбрать <em>Да</em>'
+    selector: .views-ui-display-tab-bucket.filter
   views-ui-filter-operations:
     id: views-ui-filter-operations
     plugin: text
-    label: 'Filtri toimingud'
-    body: 'Lisa, järjesta või eemalda filtrid.'
+    label: 'Действия с фильтрами'
     weight: 7
-    attributes:
-      data-class: 'views-ui-display-tab-bucket.filter .dropbutton-widget'
+    body: 'Добавить, упорядочить или удалить фильтры.'
+    selector: '.views-ui-display-tab-bucket.filter .dropbutton-widget'
   views-ui-sorts:
     id: views-ui-sorts
     plugin: text
-    label: Sorteerimistingimused
-    body: 'Control the order in which the results are output. Click on an active sort rule to configure it.'
+    label: 'Критерий сортировки'
     weight: 8
-    attributes:
-      data-class: views-ui-display-tab-bucket.sort
+    body: 'Управляйте порядком вывода результатов. Нажмите на активное правило сортировки для его настройки.'
+    selector: .views-ui-display-tab-bucket.sort
   views-ui-sorts-operations:
     id: views-ui-sorts-operations
     plugin: text
-    label: 'Sorteeri tegevused'
-    body: 'Lisa, järjesta või eemalda sorteerimise reeglid.'
+    label: 'Действия сортировки'
     weight: 9
-    attributes:
-      data-class: 'views-ui-display-tab-bucket.sort .dropbutton-widget'
+    body: 'Добавление, упорядочивание и удаление правил сортировки.'
+    selector: '.views-ui-display-tab-bucket.sort .dropbutton-widget'
   views-ui-preview:
     id: views-ui-preview
     plugin: text
-    label: Eelvaade
-    body: 'Näita eelvaadet vaate väljundist.'
+    label: Предпросмотр
     weight: 10
-    location: left
-    attributes:
-      data-id: preview-submit
+    body: 'Показать предварительный просмотр вывода представления.'
+    selector: '#preview-submit'
+    position: left-start

@@ -16,23 +16,23 @@ bundle: interaktiivne_sisu
 mode: default
 content:
   field_h5p:
-    weight: 101
+    type: h5p_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: h5p_default
+    weight: 101
     region: content
   field_kategooria:
-    weight: 102
+    type: term_reference_tree
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: term_reference_tree
+    weight: 102
     region: content
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   langcode: true

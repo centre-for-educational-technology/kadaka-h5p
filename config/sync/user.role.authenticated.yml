@@ -1,7 +1,11 @@
 uuid: 31a29567-b893-4fa6-b388-b440d7652c2d
 langcode: et
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - comment
+    - search
+    - system
 _core:
   default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
 id: authenticated

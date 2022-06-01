@@ -1,6 +1,6 @@
 {
     "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer",
+    "description": "Project template for Drupal 9 projects with composer",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "authors": [
@@ -20,12 +20,13 @@
         "composer/installers": "^1.7",
         "cweagans/composer-patches": "^1.6.5",
         "drupal/bootstrap": "^3.20",
-        "drupal/core-composer-scaffold": "^8.9",
-        "drupal/core-recommended": "^8.9",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-project-message": "^9",
+        "drupal/core-recommended": "^9",
         "drupal/custom_search": "^1.0@beta",
         "drupal/dropdown_language": "^2.3",
-        "drupal/h5p": "^1.0@RC",
-        "drupal/h5peditor": "^1.0@RC",
+        "drupal/h5p": "^2.0@alpha",
+        "drupal/h5peditor": "^2.0@alpha",
         "drupal/jquery_ui": "^1.4",
         "drupal/taxonomy_manager": "^2.0",
         "drupal/term_reference_tree": "^1.0",
@@ -36,7 +37,7 @@
         "zaporylie/composer-drupal-optimizations": "^1.0"
     },
     "require-dev": {
-        "drupal/core-dev": "^8.9.0"
+        "drupal/core-dev": "^9"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -50,7 +51,8 @@
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "zaporylie/composer-drupal-optimizations": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/core-project-message": true
         }
     },
     "autoload": {
